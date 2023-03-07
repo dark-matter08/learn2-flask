@@ -5,7 +5,7 @@ conn = sqlite3.connect('books.sqlite')
 cursor = conn.cursor()
 
 sql_query = """ CREATE TABLE book (
-    id interger PPRIMARY KEY,
+    id integer PPRIMARY KEY,
     author text NOT NULL,
     language text NOT NULL,
     title text NOT NULL
