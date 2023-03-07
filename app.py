@@ -56,33 +56,13 @@ def books():
 @app.route('/book/<int:id>', methods=['GET', 'PUT', 'DELETE'])
 def single_book(id):
     if request.method == 'GET':
-        for book in book_list:
-            if book['id'] == id:
-                return jsonify(book)
-            pass
+        pass
 
     if request.method == 'PUT':
-        for book in book_list:
-            if book['id'] == id:
-                book['author'] = request.form['author']
-                book['language'] = request.form['language']
-                book['title'] = request.form['title']
-
-                updated_book = {
-                    'id': id,
-                    'author': book['author'],
-                    'language': book['language'],
-                    'title': book['title']
-                }
-
-                return jsonify(updated_book)
+        pass
 
     if request.method == 'DELETE':
-        for index, book in enumerate(book_list):
-            if book['id'] == id:
-                book_list.pop(index)
-
-                return jsonify(book_list)
+        pass
 
 
 if __name__ == '__main__':
